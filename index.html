@@ -97,7 +97,7 @@
 		   var errorContainer = repoContainer.find(".error-nav");
 		   var countContainer = $(".github_tips");
 		   var colors = ["light","info","dark","success","black-50","warning","primary","danger"];
-		   $.get("https://api.github.com/users/kaygb/repos",function(result){
+		   $.get("https://api.github.com/users/kaygb/repos?type=all&direction=desc&sort=updated&per_page=100",function(result){
 			   if(result){
 				   loadingContainer.addClass("hide");
 				   var ul = $("<div class='raw'><div class='col-md-12'><div class=\"row row-sm text-center " +
