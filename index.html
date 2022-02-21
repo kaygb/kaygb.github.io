@@ -37,16 +37,23 @@
 			</div>
 		</div>
 	</nav>
+	<div class="jumbotron jumbotron-fluid" style="margin-top: 48px;">
+		<div class="container">
+			 <h1 class="display-4">冰微未来实验室</h1>
 
-	<div class="container" style="margin-top:100px">
+			<p class="lead">Github 项目展示</p>
+		</div>
+	</div>
+
+	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 			    
 				<div class="card border-0 shadow-sm mb-4 rounded-0">
 					
 					<div class="card-body">
-
-						正在建设中...
+						一言：
+						<span id="hitokoto" class="card-title">一言加载中...</span>
 
 					</div>
 
@@ -109,7 +116,7 @@
 					   var repo = result[i];
 					   repo.updated_at = repo.updated_at.substring(0,repo.updated_at.lastIndexOf("T"));
 					   if (repo.language == null){
-						   repo.language = "未知";
+						   repo.language = "未知语言";
 					   }
 					   if (repo.homepage == null){
 						   repo.homepage = "#"
@@ -142,6 +149,7 @@
    $(open().init);
 
 </script>
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 <script>
 window.onload = function() {
     setTimeout(function() {
